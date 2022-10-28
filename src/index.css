@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.main{
+  background-color: #eee;
+  height: 800px;
+}
+nav{
+  background-color: rgb(230, 32, 32);
+  padding: 5px;
+  color: #fff;
+}
+nav .container{
+  display: flex;
+  justify-content: space-between;
+  
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  
+}
+nav ul li{
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.search{
+  background-color: #eee;
+}
+.search h2{
+  padding: 10px 0;
+}
+.search .search-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 10px auto;
+}
+.search .search-box{
+  display: flex;
+  background-color: #fff;
+  padding: 3px;
+}
+.search .search-box input{
+  padding: 7px;
+  border: none;
+  width: 100%;
+}
+.search .search-box input:focus{
+  outline: none;
+}
+
+.undo{
+  padding: 5px;
+  border: none;
+  background-color: #04c46a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+span.user{
+  color: #f00;
+  font-size: 1.3rem;
+}
+.new-product{
+  width: 50%;
+  margin: 10px auto;
+  padding: 7px;
+  background-color: rgb(61, 221, 61);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+table{
+  margin: 15px auto;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.table-content{
+  background-color: #eee;
+}
+table .head{
+  border: none;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+table .head td{
+  border: none;
+  padding: 7px;
+}
+table .head td:not(:last-child){
+  border-right: 1px solid #000;
+}
+
+table .content{
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 1px #eee;
+  background-color: #fff;
+}
+table .content td{
+  padding: 8px;
+  text-align: center;
+  border: none;
+}
+
+table .content .btn{
+  padding: 7px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+table .content .update{
+  background-color: #04c46a;
+  color: #fff;
+}
+table .content .delete{
+  background-color: #f00;
+  color: #fff;
+}
+table .content .update:hover,
+table .content .delete:hover{
+  opacity: 1;
+}
+
+.pop-up{
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.pop-up.active{
+  display: block;
+}
+.pop-up .op{
+  height: 800px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: no-drop;
+}
+.pop-up .form-box{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  background-color: #fff;
+  padding: 3px;
+  width: 30%;
+  border-radius: 3px;
+  animation-name: popup;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+.pop-up .form-box form{
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+.pop-up form input,
+.pop-up form select
+{
+  padding: 5px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #eee;
+  margin: 5px 0;
+}
+.pop-up form input:focus,
+.pop-up form select:focus{
+  outline: none;
+  border: 1px solid #eee;
+}
+.pop-up form button{
+  padding: 7px;
+  margin: 7px 0;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+}
+.pop-up form button.add{
+  background-color: rgb(61, 221, 61);
+}
+.pop-up form button.update{
+  background-color: #04c46a;
+}
+.pop-up form button.cancel{
+  background-color: #f00;
+}
+.deleted-product-details{
+  padding: 5px;
+}
+.deleted-product-details p{
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+.deleted-product-details span{
+  color: rgb(233, 57, 57);
+  font-size: 1.5rem;
+}
+.deleted-product-details button{
+  padding: 5px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+.deleted-product-details button.cancel{
+  background-color: #f00;
+  color: #fff;
+}
+.deleted-product-details button.delete{
+  background-color: #04c46a;
+  color: #fff;
+}
+
+
+@keyframes popup{
+  0%{
+    transform: translate(-50%,-120%);
+  }
+  100%{
+    transform: translate(-50%, 0%);
+  }
+}
